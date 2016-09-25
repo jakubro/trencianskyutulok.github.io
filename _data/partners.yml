@@ -1,0 +1,50 @@
+- name: Sponzori
+  items:
+  - name: Mesto Trenčín
+    link: http://www.trencin.sk/
+    image: /assets/images/sponzori/trencin.jpg
+  - name: MPL STAVRO - Stavajte rozumne s MPL STAVRO
+    link: http://mplstavro.sk/
+    image: /assets/images/sponzori/mpl.jpg
+
+- name: Finančné granty
+  items:
+  - name: Nadácia Tatra banky
+    link: http://www.nadaciatatrabanky.sk/
+    image: /assets/images/sponzori/tatra_banka.jpg
+
+- name: Mediálni partneri
+  items:
+  - name: Podporte neziskové organizácie - Občianske združenie pre dobrú vec
+    link: http://www.podporte.sk/
+    image: /assets/images/sponzori/podporte.jpg
+  - name: Info Trenčín - Informačné noviny samosprávy mesta Trenčín
+    link: http://www.trencin.sk/info
+    image: /assets/images/sponzori/info_trencin.jpg
+  - name: MY Trenčianske noviny
+    link: http://www.mynoviny.sk/nase-redakcie/trenciansky-kraj/trencianske-noviny/
+    image: /assets/images/sponzori/my_trencianske_noviny.jpg
+  - name: Pardon Trenčín - Inzertný a informačný týždenník
+    link: http://www.pardon.sk/tn.html
+    image: /assets/images/sponzori/pardon.jpg
+
+- name: Priatelia psích tulákov
+  items:
+  - name: Zuzana Chudá Photography
+    link: https://www.facebook.com/ZuzanaChudaPhotography/
+    image: /assets/images/sponzori/zuzana_chuda.jpg
+  - name: Svadobné obrúčky KAMEA
+    link: http://www.svadobneobrucky.com/
+    image: /assets/images/sponzori/kamea.jpg
+  - name: SUPER ZOO - Všetko pre vaše zvieratká
+    link: http://www.superzoo.sk/nase-predajne/trencin/
+    image: /assets/images/sponzori/super_zoo.jpg
+  - name: Tenisové centrum mládeže Trenčín
+    link: http://tenisove-centrum.sk/
+    image: /assets/images/sponzori/tcm.jpg
+  - name: Akvaristika a chovateľstvo MITOŠINKA
+    link: http://www.akvaristika-chovatelstvo.sk/
+    image: /assets/images/sponzori/mitosinka.jpg
+  - name: Zviertká MM - Všetko pre Vaše domáce zvieratká
+    link: http://www.prezvieratka.sk/
+    image: /assets/images/sponzori/prezvieratka_mm.jpg

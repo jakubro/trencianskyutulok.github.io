@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<article class="card article"
+         itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="article__header">
+    <h1 itemprop="name headline">{{ page.title | strip }}</h1>
+    <span>
+      <time datetime="{{ page.date | date_to_xmlschema }}"
+            itemprop="datePublished">
+        {{ page.date | date: "%b %-d, %Y" }}
+      </time>
+      {% if page.author %} •
+        {% if page.author_link %}<a href="{{ page.author_link }}">{% endif %}
+        <span itemprop="author"
+              itemscope itemtype="http://schema.org/Person">
+            <span itemprop="name">{{ page.author | strip }}</span>
+        </span>
+        {% if page.author_link %}</a>{% endif %}
+      {% endif %}
+    </span>
+  </header>
+  <div class="article__content"
+       itemprop="articleBody">
+    {{ content }}
+  </div>
+</article>

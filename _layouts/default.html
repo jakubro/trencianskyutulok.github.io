@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{% if page.title %}{{ page.title | strip | escape }}{% else %}{{ site.title | strip | escape }}{% endif %}</title>
+  {% if page.excerpt or site.description %}
+  <meta name="description"
+        content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | strip | truncate: 160 }}{% else %}{{ site.description | strip_newlines | strip }}{% endif %}">
+  {% endif %}
+
+  <link rel="canonical"
+        href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}"
+        href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">
+
+  {% for meta in site.data.meta %}
+  <meta name="{{ meta.key | strip }}" content="{{ meta.value | strip }}"/>
+  {% endfor %}
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ site.baseurl }}/assets/favicons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/assets/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" color="#5bbad5" href="{{ site.baseurl }}/assets/favicons/safari-pinned-tab.svg">
+  <meta name="msapplication-TileColor" content="#979f59">
+  <meta name="msapplication-TileImage" content="{{ site.baseurl }}/assets/favicons/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/main.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+
+  <script data-main="{{ site.baseurl }}/assets/main.js" src="{{ site.baseurl }}/assets/components/requirejs/require.js"></script>
+
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', '{{ site.google_analytics_code }}', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+<body class="{{ page.class }}"
+      itemscope itemtype="http://schema.org/WebPage">
+
+<div id="fb-root"></div>
+<script>
+  (function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/sk_SK/sdk.js#xfbml=1&version=v2.7";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<header class="header drawer">
+  <span class="header__logo"></span>
+  <h2 class="header__title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h2>
+  <div class="header__spacer"></div>
+
+  <input type="checkbox" id="drawer__nav-toggle" class="drawer__nav-toggle"/>
+  <label for="drawer__nav-toggle" class="drawer__nav-toggle-label">
+    <i class="material-icons drawer__menu-button">menu</i>
+    <i class="material-icons drawer__close-button">close</i>
+  </label>
+
+  <nav class="header__navigation drawer__navigation">
+    <ul class="navigation-list">
+      {% for p in site.pages %}
+      {% unless p.layout != 'page' or p.sitemap == false %}
+      <li class="navigation-list__item">
+        <a class="navigation-list__link" href="{{ p.url }}">
+          {% if p.short_title %}
+          {{ p.short_title }}
+          {% else %}
+          {{ p.title }}
+          {% endif %}
+        </a>
+      </li>
+      {% endunless %}
+      {% endfor %}
+    </ul>
+  </nav>
+</header>
+
+<div class="color-inverted">
+  <main class="main" itemprop="mainContentOfPage">
+    {{ content }}
+  </main>
+</div>
+
+<footer class="footer">
+  <div class="footer__row">
+    <div class="footer__column">
+      <section class="footer__tile">
+        <h2 class="footer__heading">Útulok</h2>
+        <p>
+          Trenčiansky Útulok<br/>
+          Zlatovská 2194/35<br/>
+          911&nbsp;05 Trenčín-Zlatovce<br/>
+        </p>
+      </section>
+      <section class="footer__tile">
+        <h2 class="footer__heading">Občianske združenie</h2>
+        <p>
+          IČO: 42152844<br/>
+          OZ Trenčiansky ÚTULOK<br/>
+          Mníchova Lehota 315<br/>
+          913&nbsp;21 Mníchova Lehota<br/>
+        </p>
+      </section>
+    </div>
+    <div class="footer__column">
+      <section class="footer__tile">
+        <h2 class="footer__heading">Kontakt</h2>
+        <p>
+          Informačné hodiny: PO-NE&nbsp;10:00&nbsp;-&nbsp;16:00<br/>
+          <a href="mailto:{{ site.email }}">{{ site.email }}</a><br/>
+          <a href="tel:{{ site.phone | replace: '-', '' }}">{{ site.phone | replace: '-', '&nbsp;' }} (vedúca)</a><br/>
+        </p>
+        <p>
+          IBAN: SK4109000000005017143457<br/>
+          SWIFT: GIBASKBX<br/>
+        </p>
+      </section>
+    </div>
+    <div class="footer__column footer__tile">
+      <div class="fb-page" style="width: 300px;"
+           data-href="https://www.facebook.com/{{ site.facebook_username }}/"
+           data-small-header="true"
+           data-adapt-container-width="true"
+           data-hide-cover="true"
+           data-show-facepile="true">
+        <blockquote cite="https://www.facebook.com/{{ site.facebook_username }}/"
+                    class="fb-xfbml-parse-ignore">
+          <a href="https://www.facebook.com/{{ site.facebook_username }}/">
+            @{{ site.facebook_username }} na Facebook-u
+          </a>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+  <div class="footer__row footer__row--wrapped">
+    {% for partner_group in site.data.partners %}
+    <section class="footer__tile">
+      <h2 class="footer__heading">{{ partner_group.name }}</h2>
+      <ul class="partner-list">
+        {% for partner_item in partner_group.items %}
+        <li class="partner-list__item">
+          <a class="partner-list__link" href="{{ partner_item.link }}">
+            <img
+              class="partner-list__logo"
+              alt="{{ partner_item.name }}"
+              src="{{ partner_item.image | prepend: site.baseurl }}"
+            >
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endfor %}
+  </div>
+  <div class="footer__credits">
+    <i class="material-icons">pets</i>
+    <p>
+      &copy; 2016
+      code by <a href="http://jakubroman.sk/">jro</a>
+      &amp;
+      design by <a href="https://www.facebook.com/ZuzanaChudaPhotography/">Zuzana Chudá</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

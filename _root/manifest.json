@@ -1,0 +1,16 @@
+---
+layout: null
+permalink: /manifest.json
+---
+{
+  "name": "Tren\u010diansky \u00datulok",
+  "icons": [
+    {
+      "src": "\/assets\/favicons\/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image\/png"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "display": "standalone"
+}

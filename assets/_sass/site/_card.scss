@@ -1,0 +1,18 @@
+@import "../config";
+@import "../base/flex";
+
+.card {
+  @include container($large-screen * .8);
+
+  border: 2px solid $light-gray;
+  background-color: $white;
+  box-shadow: $shadow;
+
+  @media (max-width: $large-screen) {
+    padding: $small-spacing / 2;
+  }
+
+  @media (min-width: $large-screen) {
+    padding: $small-spacing;
+  }
+}

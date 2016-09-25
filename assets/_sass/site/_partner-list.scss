@@ -1,0 +1,37 @@
+@import "../config";
+@import "../base/flex";
+
+.partner-list {
+
+  @include layout-horizontal;
+  @include layout-wrap;
+
+  @media (max-width: $large-screen) {
+    @include layout-center-justified;
+  }
+
+  @media (min-width: $large-screen) {
+    @include layout-start-justified;
+  }
+
+  // item
+
+  &__item {
+    @include layout-inline;
+
+    padding: 1px;
+  }
+
+  &__link {
+
+  }
+
+  // logo
+
+  &__logo {
+    @include block;
+
+    width: 69px;
+    height: 69px;
+  }
+}

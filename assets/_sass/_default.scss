@@ -1,0 +1,59 @@
+@import "config";
+@import "base/flex";
+
+// Default scheme
+
+body {
+  @include fullbleed;
+
+  color: $yellow;
+  background: $dark-gray;
+
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+a {
+  color: $yellow;
+  text-decoration: none;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $white;
+    text-decoration: underline;
+  }
+}
+
+.color-inverted {
+  color: $dark-gray;
+  background: $light-gray;
+
+  a {
+    color: $blue;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-weight: 600;
+  line-height: $heading-line-height;
+}
+
+@for $i from 1 to 6 {
+  h#{$i} {
+    font-size: heading-font-size($i);
+  }
+}

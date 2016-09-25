@@ -1,0 +1,39 @@
+title: Trenčiansky Útulok
+description: >
+  Nájdite si svojho nového štvornohého člena do Vašej rodiny.
+  Pomôžte nájsť zatúlaného psíka a pomôcť mu vrátiť sa späť do svojho domova.
+  OZ Trenčiansky Útulok prevádzkuje Karanténnu stanicu v Trenčíne.
+  Postupne sa z Karanténnej stanice Trenčín stáva útulok pre psíkov v Trenčíne.
+
+# omit trailing slash!
+url: http://localhost:4000
+# leading slash - yes, trailing slash - no! example: "/utulok-trencin.sk" or ""
+baseurl: ""
+
+google_analytics_code: ""
+facebook_album_link: https://embedsocial.com/facebook_album/pro/391cc6bc1c01f1a6b732c89d6cd5d8af80257c5f
+
+email: utulok.trencin@gmail.com
+phone: +421-915-785-007​
+facebook_username: TrencianskyUTULOK
+
+# Build settings
+markdown: kramdown
+sass:
+#  style: compressed
+  sass_dir: assets
+
+gems:
+  - jekyll-sitemap
+
+include:
+  - _root
+
+exclude:
+  - assets/_sass
+  - bower.json
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - start

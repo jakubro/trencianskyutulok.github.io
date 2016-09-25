@@ -1,0 +1,55 @@
+@import "../config";
+@import "../base/flex";
+
+.article {
+
+  &__header,
+  &__content {
+    padding: {
+      left: $small-spacing;
+      right: $small-spacing;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $blue;
+    padding: {
+      top: $small-spacing;
+      bottom: $small-spacing / 2;
+    }
+  }
+
+  &__header {
+    font-family: $heading-font-family;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  &__content {
+    img {
+      display: block;
+      margin: {
+        left: auto;
+        right: auto;
+      }
+
+      padding: {
+        top: $small-spacing;
+        bottom: $small-spacing;
+      }
+
+      @media (max-width: $large-screen) {
+        width: 80%;
+      }
+      @media (min-width: $large-screen) {
+        width: 80%;
+        max-width: $large-screen * 0.6;
+      }
+    }
+  }
+}

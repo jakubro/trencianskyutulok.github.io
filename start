@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+if ARGV.length == 0
+  exec('jekyll serve --config _config.dev.yml')
+elsif ARGV.length == 1 && ARGV.at(0) == "prod"
+  exec('jekyll serve')
+else
+  raise "bad command"
+end

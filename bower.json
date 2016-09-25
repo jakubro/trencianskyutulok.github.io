@@ -1,0 +1,8 @@
+{
+  "name": "jakubro-utulok-trencin.sk",
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "requirejs": "^2.2.0",
+    "iframe-resizer": "davidjbradshaw/iframe-resizer#^3.5.5"
+  }
+}
