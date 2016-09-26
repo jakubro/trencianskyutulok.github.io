@@ -31,9 +31,9 @@ include:
 
 exclude:
   - assets/_sass
+  - vendor
   - bower.json
   - CNAME
   - Gemfile
   - Gemfile.lock
   - README.md
-  - start
