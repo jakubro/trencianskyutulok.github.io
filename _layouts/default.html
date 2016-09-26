@@ -8,7 +8,7 @@
   <title>{% if page.title %}{{ page.title | strip | escape }}{% else %}{{ site.title | strip | escape }}{% endif %}</title>
   {% if page.excerpt or site.description %}
   <meta name="description"
-        content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | strip | truncate: 160 }}{% else %}{{ site.description | strip_newlines | strip }}{% endif %}">
+        content="{% if page.excerpt %}{{ page.excerpt | strip | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | strip | strip_newlines }}{% endif %}">
   {% endif %}
 
   <link rel="canonical"
