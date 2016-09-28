@@ -53,6 +53,12 @@
       }
     }
 
+    p,
+    ul,
+    ol {
+      word-break: break-all;
+    }
+
     strong {
       font-weight: bold;
     }
