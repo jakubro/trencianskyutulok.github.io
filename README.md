@@ -36,3 +36,7 @@ None, yet.
 ## License
 
 MIT
+
+### License exemption
+
+Files under [assets/images](assets/images) and [assets/favicons](assets/favicons) are exempt from the [MIT LICENSE](LICENSE) and they may not be published, broadcast, rewritten or redistributed in whole or part without the express written permission from author.
