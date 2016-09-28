@@ -1,8 +1,8 @@
 # <img src='http://www.utulok-trencin.sk/assets/favicons/safari-pinned-tab.svg' height='70'> Trenčiansky Útulok
 
-This is source code behind [www.utulok-trencin.sk](http://www.utulok-trencin.sk), website for a dog shelter _Trenčiansky Útulok_ and a not-for-profit organization _OZ Trenčiansky Útulok_.
+This is source code behind [www.utulok-trencin.sk](http://www.utulok-trencin.sk), website for a dog shelter _Trenčiansky Útulok_ and a nonprofit organization _OZ Trenčiansky ÚTULOK_.
 
-It is written for [Jekyll](http://jekyllrb.com/) and runs as a [Github Page](https://pages.github.com/).
+It is meant to be processed by [Jekyll](http://jekyllrb.com/) in order to run as a [Github Page](https://pages.github.com/).
 
 ## Installation
 
