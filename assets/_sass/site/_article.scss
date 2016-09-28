@@ -11,6 +11,12 @@
     }
   }
 
+  &__header {
+    font-family: $heading-font-family;
+    font-weight: 700;
+    text-align: left;
+  }
+
   h1,
   h2,
   h3,
@@ -24,13 +30,8 @@
     }
   }
 
-  &__header {
-    font-family: $heading-font-family;
-    font-weight: 700;
-    text-align: left;
-  }
-
   &__content {
+
     img {
       display: block;
       margin: {
@@ -50,6 +51,24 @@
         width: 80%;
         max-width: $large-screen * 0.6;
       }
+    }
+
+    strong {
+      font-weight: bold;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    ol {
+      list-style-type: decimal;
+      list-style-position: inside;
+    }
+
+    ul {
+      list-style-type: disc;
+      list-style-position: inside;
     }
   }
 }
