@@ -27,6 +27,9 @@ include:
   - _root
 
 exclude:
+  - _posts/CONTRIBUTORS
+  - _posts/LICENSE
+  - _posts/README.md
   - assets/_sass
   - vendor
   - bower.json
