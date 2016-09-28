@@ -5,16 +5,30 @@ title: Veterinárne okienko
 permalink: /veterinarne-okienko/
 ---
 {% for post in site.posts %}
-<article class="card article"
+<article class="card"
          itemscope itemtype="http://schema.org/BlogPosting">
-  <header class="article__header">
+  <header class="card__header">
     <h6 itemprop="name headline">
       <a href="{{ post.url }}">{{ post.title | strip }}</a>
     </h6>
   </header>
-  <div class="article__content"
+  <div class="card__content"
        itemprop="articleBody">
-    {{ post.excerpt }}
+    {% if post.image %}
+    <div class="card__image">
+      <img
+        class="card__image"
+        alt="{{ post.title | strip }}"
+        src="{{ post.image }}"
+      >
+    </div>
+    {% endif %}
+    <div class="card__excerpt">
+      {{ post.excerpt }}
+    </div>
+  </div>
+  <div class="card__actions">
+    <a href="{{ post.url }}">Celý článok</a>
   </div>
 </article>
 {% endfor %}
