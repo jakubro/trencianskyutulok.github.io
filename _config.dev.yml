@@ -23,17 +23,18 @@ sass:
 #  style: compressed
   sass_dir: assets
 
-gems:
-  - jekyll-sitemap
-
 include:
   - _root
 
 exclude:
+  - _posts/CONTRIBUTORS
+  - _posts/LICENSE
+  - _posts/README.md
   - assets/_sass
   - vendor
   - bower.json
   - CNAME
   - Gemfile
   - Gemfile.lock
+  - LICENSE
   - README.md
