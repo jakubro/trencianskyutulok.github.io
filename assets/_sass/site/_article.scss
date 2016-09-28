@@ -11,6 +11,12 @@
     }
   }
 
+  &__header {
+    font-family: $heading-font-family;
+    font-weight: 700;
+    text-align: left;
+  }
+
   h1,
   h2,
   h3,
@@ -22,12 +28,6 @@
       top: $small-spacing;
       bottom: $small-spacing / 2;
     }
-  }
-
-  &__header {
-    font-family: $heading-font-family;
-    font-weight: 700;
-    text-align: left;
   }
 
   &__content {
