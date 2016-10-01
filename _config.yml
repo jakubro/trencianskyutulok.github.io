@@ -24,7 +24,7 @@ sass:
   sass_dir: assets
 
 gems:
-  - jekyll-sitemaps
+  - jekyll-sitemap
 
 include:
   - _root
