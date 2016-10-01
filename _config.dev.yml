@@ -23,6 +23,9 @@ sass:
 #  style: compressed
   sass_dir: assets
 
+gems:
+  - jekyll-sitemap
+
 include:
   - _root
 
