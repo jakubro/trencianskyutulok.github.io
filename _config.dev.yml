@@ -5,10 +5,17 @@ description: >
   OZ Trenčiansky Útulok prevádzkuje Karanténnu stanicu v Trenčíne.
   Postupne sa z Karanténnej stanice Trenčín stáva útulok pre psíkov v Trenčíne.
 
-# omit trailing slash!
+# w/o trailing slash
 url: http://localhost:4000
-# leading slash - yes, trailing slash - no! example: "/utulok-trencin.sk" or ""
+# w/ leading slash, w/o trailing slash
+# examples:
+#   - ""
+#   - "/subfolder"
 baseurl: ""
+
+timezone: Europe/Bratislava
+excerpt_separator: <!--more-->
+permalink: pretty
 
 google_analytics_code: ""
 facebook_album_link: https://embedsocial.com/facebook_album/pro/391cc6bc1c01f1a6b732c89d6cd5d8af80257c5f
