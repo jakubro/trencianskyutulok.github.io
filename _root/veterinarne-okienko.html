@@ -19,7 +19,7 @@ permalink: /veterinarne-okienko/
       <img
         class="card__image"
         alt="{{ post.title | strip }}"
-        src="{{ post.image }}"
+        src="{{ post.image | replace:'~',site.baseurl  }}"
       >
     </div>
     {% endif %}
