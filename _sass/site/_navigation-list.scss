@@ -1,0 +1,18 @@
+@import "../_config";
+@import "../base/_flex";
+
+.navigation-list {
+  @include layout-horizontal;
+  @include layout-wrap;
+  @include layout-start-justified;
+
+  // item
+
+  &__item {
+  }
+
+  // link
+
+  &__link {
+  }
+}

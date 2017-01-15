@@ -1,0 +1,48 @@
+@import "../_config";
+@import "../base/_flex";
+
+.header {
+  @include container($large-screen);
+  @include layout-horizontal;
+  @include layout-center;
+
+  padding: {
+    left: $small-spacing;
+    right: $small-spacing;
+  }
+
+  height: $base-spacing * 2;
+
+  /**
+   * Logo.
+   */
+
+  &__logo {
+  }
+
+  /**
+   * Title.
+   */
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  /**
+   * Spacer.
+   */
+
+  &__spacer {
+    @include flex(auto);
+  }
+
+  /**
+   * Navigation.
+   */
+
+  &__navigation {
+    font-size: heading-font-size(2);
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
