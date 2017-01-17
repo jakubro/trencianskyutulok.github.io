@@ -27,6 +27,7 @@ sass:
   sass_dir: _sass
 
 exclude:
+  - vendor/
   - bower.json
   - CNAME
   - Gemfile
