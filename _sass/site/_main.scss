@@ -1,0 +1,16 @@
+@import "../_config";
+@import "../base/_flex";
+
+.main {
+  @include container($large-screen);
+  @include layout-vertical;
+  @include layout-center;
+
+  @media (max-width: $large-screen) {
+    padding: $small-spacing $small-spacing/2;
+  }
+
+  @media (min-width: $large-screen) {
+    padding: $base-spacing 0;
+  }
+}

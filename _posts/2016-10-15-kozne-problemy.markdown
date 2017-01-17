@@ -5,14 +5,14 @@ author: Katarína Rošťáková
 author_link: https://www.facebook.com/katarina.rostakova
 date: 2016-10-15 17:00:00
 categories: veterinarne-okienko
-image: ~/assets/images/clanky/2016-10-15-kozne-problemy.jpg
+image: ~/images/clanky/2016-10-15-kozne-problemy.jpg
 ---
 
 Problémy so šupinatením kože, svrbením, nadmernou tvorbou kožného mazu, vypadávaním srsti a následnou tvorbou lysých miest na tele psa, to všetko môže mať rôzne príčiny. V tomto článku sme ich rozobrali podrobnejšie.
 
 <!--more-->
 
-![chorý pes](/assets/images/clanky/2016-10-15-kozne-problemy.jpg)
+![chorý pes](/images/clanky/2016-10-15-kozne-problemy.jpg)
 
 ## II. časť - Kožné problémy
 

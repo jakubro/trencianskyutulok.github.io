@@ -1,8 +1,0 @@
-@import "../config";
-@import "../base/flex";
-
-.fb-page-gallery {
-  @include fullbleed;
-  width: 100%;
-  border: 0;
-}
