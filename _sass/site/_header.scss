@@ -6,9 +6,11 @@
   @include layout-horizontal;
   @include layout-center;
 
-  padding: {
-    left: $small-spacing;
-    right: $small-spacing;
+  @media (max-width: $large-screen) {
+    padding: {
+      left: $small-spacing;
+      right: $small-spacing;
+    }
   }
 
   height: $base-spacing * 2;
