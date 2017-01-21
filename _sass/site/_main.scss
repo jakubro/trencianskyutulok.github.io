@@ -2,6 +2,7 @@
 @import "../utils/utils";
 
 .main {
+
   @include container($large-screen);
   @include layout-vertical;
   @include layout-center;
