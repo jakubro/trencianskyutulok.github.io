@@ -2,3 +2,37 @@
 layout: default
 ---
 
+NEKUPUJ, ADOPTUJ SI NÁS
+Z KARANTÉNNEJ STANICE TRENČÍN
+
+<img src="/images/site/index.png">
+
+<a href="ponuka/">Ponuka psíkov</a>
+
+Vitajte na webovej stránke Občianskeho združenia Trenčiansky ÚTULOK,
+ktoré sa stará o psíkov v Karanténnej stanici Trenčín
+(v blízkej dobe aj o psíkov v Trenčianskom ÚTULKU).
+
+Najnovšie a najaktuálnejšie informácie o útulku, fungovaní, psíkoch aj
+novinkách nájdete na našej facebookovej stránke.
+
+<h2>Ako sa k nám dostanete?</h2>
+
+<div id="map" style="height: 400px; width: 100%"></div>
+<script>
+  function initMap() {
+    var uluru = {lat: 48.884797, lng: 18.0041647};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 14,
+      center: uluru,
+      scrollwheel: false
+    });
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+    });
+  }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?callback=initMap&language=sk&region=SK&key=AIzaSyD7hsnTxxljAwwlxZHmO9AVkku9fTftHFc">
+</script>
