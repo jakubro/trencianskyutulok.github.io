@@ -14,8 +14,6 @@
     @include layout-start-justified;
   }
 
-  // item
-
   &__item {
     @include layout-inline;
 
@@ -23,10 +21,7 @@
   }
 
   &__link {
-
   }
-
-  // logo
 
   &__logo {
     @include block;
