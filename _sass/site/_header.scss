@@ -2,6 +2,7 @@
 @import "../utils/utils";
 
 .header {
+
   @include container($large-screen);
   @include layout-horizontal;
   @include layout-center;
@@ -15,32 +16,16 @@
 
   height: $base-spacing * 2;
 
-  /**
-   * Logo.
-   */
-
   &__logo {
   }
-
-  /**
-   * Title.
-   */
 
   &__title {
     text-transform: uppercase;
   }
 
-  /**
-   * Spacer.
-   */
-
   &__spacer {
-    @include flex(auto);
+    @include flex-auto;
   }
-
-  /**
-   * Navigation.
-   */
 
   &__navigation {
     font-size: heading-font-size(2);
