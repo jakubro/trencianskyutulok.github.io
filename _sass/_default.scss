@@ -1,44 +1,45 @@
 @import "config";
 @import "base/_flex";
 
-// Default scheme
-
-body {
-  @include fullbleed;
-
+.color {
+  /*
+    Default color scheme.
+   */
   color: $yellow;
   background: $dark-gray;
 
-  font-family: $base-font-family;
-  font-size: $base-font-size;
-  line-height: $base-line-height;
-}
-
-a {
-  color: $yellow;
-  text-decoration: none;
-
-  &:active,
-  &:focus,
-  &:hover {
-    color: $white;
-    text-decoration: underline;
-  }
-}
-
-.color-inverted {
-  color: $dark-gray;
-  background: $light-gray;
-
   a {
-    color: $blue;
+    color: $yellow;
+    text-decoration: none;
 
     &:active,
     &:focus,
     &:hover {
-      color: $blue;
+      color: $white;
+      text-decoration: underline;
     }
   }
+
+  /*
+    Inverted color scheme.
+   */
+  &--inverted {
+    color: $dark-gray;
+    background: $light-gray;
+
+    a {
+      color: $blue;
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+}
+
+.theme {
 }
 
 h1,
@@ -56,4 +57,13 @@ h6 {
   h#{$i} {
     font-size: heading-font-size($i);
   }
+}
+
+// Default scheme
+
+body {
+  @extend body.fullbleed;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
 }
