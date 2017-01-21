@@ -1,7 +1,12 @@
 @import "https://fonts.googleapis.com/css?family=Open+Sans:300,700&subset=latin-ext";
 
 @import "base/base";
-
-@import "config";
 @import "default";
+
+// Apply default scheme
+body {
+  @extend body.fullbleed;
+  @extend .theme;
+}
+
 //@import "site/site";

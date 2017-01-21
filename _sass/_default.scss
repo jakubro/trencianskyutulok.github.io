@@ -1,9 +1,8 @@
 @import "config";
-@import "base/_flex";
 
 .color {
   /*
-    Default color scheme.
+  Default color scheme.
    */
   color: $yellow;
   background: $dark-gray;
@@ -21,7 +20,7 @@
   }
 
   /*
-    Inverted color scheme.
+  Inverted color scheme.
    */
   &--inverted {
     color: $dark-gray;
@@ -40,30 +39,46 @@
 }
 
 .theme {
-}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $heading-font-family;
-  font-weight: 600;
-  line-height: $heading-line-height;
-}
+  /*
+  Typography
+   */
 
-@for $i from 1 to 6 {
-  h#{$i} {
-    font-size: heading-font-size($i);
-  }
-}
-
-// Default scheme
-
-body {
-  @extend body.fullbleed;
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $heading-font-family;
+    font-weight: 600;
+  }
+
+  h1 {
+    font-size: 1.221em;
+  }
+
+  h2 {
+    font-size: 1.2025em;
+  }
+
+  h3 {
+    font-size: 1.184em;
+  }
+
+  h4 {
+    font-size: 1.1655em;
+  }
+
+  h5 {
+    font-size: 1.147em;
+  }
+
+  h6 {
+    font-size: 1.1285em;
+  }
 }

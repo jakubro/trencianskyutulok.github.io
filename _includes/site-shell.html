@@ -1,4 +1,4 @@
-<header class="color header drawer">
+<header class="header drawer theme color">
   <span class="header__logo"></span>
   <h2 class="header__title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h2>
   <div class="header__spacer"></div>
@@ -27,13 +27,11 @@
   </nav>
 </header>
 
-<div class="color--inverted">
-  <main class="main" itemprop="mainContentOfPage">
-    {{ content }}
-  </main>
-</div>
+<main class="main theme color--inverted" itemprop="mainContentOfPage">
+  {{ content }}
+</main>
 
-<footer class="color footer">
+<footer class="footer theme color">
   <div class="footer__row">
     <div class="footer__column">
       <section class="footer__tile">
