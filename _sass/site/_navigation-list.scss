@@ -1,17 +1,15 @@
 @import "../_config";
-@import "../base/_flex";
+@import "../utils/utils";
 
 .navigation-list {
+
   @include layout-horizontal;
   @include layout-wrap;
   @include layout-start-justified;
 
-  // item
-
-  &__item {
+  &__item:not(:last-child) {
+    padding-right: $small-spacing;
   }
-
-  // link
 
   &__link {
   }

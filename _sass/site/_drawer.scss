@@ -1,25 +1,5 @@
 @import "../_config";
-@import "../base/_flex";
-
-/**
-Usage:
-
-<header class="header drawer">
-  <input class="drawer__nav-toggle" type="checkbox" id="nav-toggle" />
-  <label class="drawer__nav-toggle-label" for="nav-toggle" >
-    <i class="drawer__menu-button">menu</i>
-    <i class="drawer__close-button">close</i>
-  </label>
-
-  <nav class="drawer__navigation">
-    <ul>
-      <li>link-1</li>
-      <li>...</li>
-      <li>link-n</li>
-    </ul>
-  </nav>
-</header>
-*/
+@import "../utils/utils";
 
 .drawer {
 
@@ -30,19 +10,13 @@ Usage:
 
   @media (max-width: $large-screen) {
 
-    // Toggle
-
     &__nav-toggle-label {
-      z-index: 1;
+      z-index: 1001;
     }
-
-    // Menu button
 
     &__nav-toggle:checked ~ &__nav-toggle-label &__menu-button {
       @include hidden;
     }
-
-    // Close button
 
     &__close-button {
       @include hidden;
@@ -52,25 +26,36 @@ Usage:
       display: inline-block !important;
     }
 
-    // Navigation
-
     &__navigation {
       @include hidden;
     }
 
     &__nav-toggle:checked ~ &__navigation {
+      z-index: 1000;
       display: flex !important;
 
       @include fullbleed;
-      @include fixed(top);
+      @include fixed-top;
       @include layout-vertical;
       @include layout-center;
 
       background: $dark-gray;
 
       padding: {
-        top: $small-spacing;
-        bottom: $small-spacing;
+        top: $base-spacing;
+        bottom: $base-spacing;
+      }
+
+      .navigation-list {
+        @include layout-vertical;
+        @include layout-center;
+
+        &__item {
+          padding: {
+            left: 0;
+            right: 0;
+          }
+        }
       }
     }
   }

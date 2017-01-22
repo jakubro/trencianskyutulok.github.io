@@ -1,15 +1,18 @@
-/* utulok-trencin.sk design
-   Note: Order of imports and rules matters only in this file.
-         Unless stated otherwise, order of imports or css rules in subsequent files does not matter.
-         This allows greater flexibility in overall development and makes components reusable.
-   Author: Jakub Roman, Zuzana Chuda
-   License: MIT
-*/
-// Fonts
-@import "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=latin-ext";
-// Config
-@import "config";
-// Site blocks
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,700&subset=latin-ext";
+
 @import "base/base";
+
+// Default scheme
+
+@import "utils/utils";
 @import "default";
+
+body {
+  @include fullbleed;
+  @extend .theme;
+  @extend .color;
+}
+
+// Site components
+
 @import "site/site";

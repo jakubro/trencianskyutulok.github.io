@@ -1,14 +1,39 @@
 ---
-title: Psíkovia čakajúci na svoj nový domov
+layout: default
+title: Aktuálna ponuka psíkov hľadajúcich svoj domov
 short_title: Ponuka psíkov
-sitemap: false
+navigation_order: 1
 excerpt: >
   Ak máte vo svojom domove kúsok prázdneho miesta, náš psík Vám ho zaplní láskou.
 ---
-Ak máte vo svojom domove kúsok prázdneho miesta, náš psík Vám ho zaplní láskou. Pre viac informácií, zavolajte prosím
-vedúcej karanténnej stanice na telefónne číslo
-<a href="tel:{{ site.phone | replace: '-', '' }}">{{ site.phone | replace: '-', '&nbsp;' }}</a>.
+
+<p>
+  Popis psíkov sa Vám zobrazí, ak si kliknete na fotku konkrétneho psíka.
+  Ďalšie informácie Vám ochotne poskytne vedúca na telefónnom čísle
+  <a href="tel:{{ site.phone | replace: '-', '' }}">
+    {{ site.phone | replace: '-', '&nbsp;' }}</a>.
+</p>
+
+<p>
+  Psíkov momentálne nie je možné venčiť.
+  Po prestavbe na útulok môžete prísť psíkov vyvenčiť.
+  Veľmi sa už na to tešia.
+</p>
+
+<ul class="bestof-list">
+  {% for item in site.data.stastlivec %}
+  <li class="bestof-list__item">
+    <a class="bestof-list__link" href="{{ item.link }}">
+      <img
+        class="bestof-list__logo"
+        alt="{{ item.name }}"
+        src="{{ item.image | prepend: site.baseurl }}"
+      >
+    </a>
+  </li>
+  {% endfor %}
+</ul>
 
 <iframe class="fb-page-gallery"
         scrolling="no"
-        src="{{ site.facebook_album_link }}"></iframe>
+        src="{{ site.fb_album_link }}"></iframe>

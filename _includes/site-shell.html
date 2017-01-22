@@ -1,0 +1,116 @@
+<header class="header drawer">
+  <span class="header__logo"></span>
+  <h2 class="header__title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h2>
+  <div class="header__spacer"></div>
+  <input type="checkbox" id="drawer__nav-toggle" class="drawer__nav-toggle" />
+  <label for="drawer__nav-toggle" class="drawer__nav-toggle-label">
+    <i class="material-icons drawer__menu-button">menu</i>
+    <i class="material-icons drawer__close-button">close</i>
+  </label>
+  <nav class="header__navigation drawer__navigation">
+    <ul class="navigation-list">
+      {% assign navigation_sites = site.pages | sort: 'navigation_order' %}
+      {% for p in navigation_sites %}
+      {% unless p.layout != 'default' or p.url == '/' or p.sitemap == false %}
+      <li class="navigation-list__item">
+        <a class="navigation-list__link" href="{{ p.url | prepend: site.baseurl }}">
+          {% if p.short_title %}
+            {{ p.short_title }}
+          {% else %}
+            {{ p.title }}
+          {% endif %}
+        </a>
+      </li>
+      {% endunless %}
+      {% endfor %}
+    </ul>
+  </nav>
+</header>
+
+<div class="color--inverted">
+  <main class="main" itemprop="mainContentOfPage">
+    {{ content }}
+  </main>
+</div>
+
+<footer class="footer">
+  <div class="footer__row">
+    <div class="footer__column">
+      <section class="footer__tile">
+        <h2 class="footer__heading">Útulok</h2>
+        <p>
+          Trenčiansky Útulok<br/>
+          Zlatovská 2194/35<br/>
+          911&nbsp;05 Trenčín-Zlatovce<br/>
+        </p>
+      </section>
+      <section class="footer__tile">
+        <h2 class="footer__heading">Občianske združenie</h2>
+        <p>
+          IČO: 42152844<br/>
+          OZ Trenčiansky ÚTULOK<br/>
+          Mníchova Lehota 315<br/>
+          913&nbsp;21 Mníchova Lehota<br/>
+        </p>
+      </section>
+    </div>
+    <div class="footer__column">
+      <section class="footer__tile">
+        <h2 class="footer__heading">Kontakt</h2>
+        <p>
+          Informačné hodiny: PO-NE&nbsp;10:00&nbsp;-&nbsp;16:00<br/>
+          <a href="mailto:{{ site.email }}">{{ site.email }}</a><br/>
+          <a href="tel:{{ site.phone | replace: '-', '' }}">{{ site.phone | replace: '-', '&nbsp;' }} (vedúca)</a><br/>
+        </p>
+        <p>
+          IBAN: SK4109000000005017143457<br/>
+          SWIFT: GIBASKBX<br/>
+        </p>
+      </section>
+    </div>
+    <div class="footer__column footer__tile">
+      <div class="fb-page" style="width: 300px;"
+           data-href="https://www.facebook.com/{{ site.fb_username }}/"
+           data-small-header="true"
+           data-adapt-container-width="true"
+           data-hide-cover="true"
+           data-show-facepile="true">
+        <blockquote cite="https://www.facebook.com/{{ site.fb_username }}/"
+                    class="fb-xfbml-parse-ignore">
+          <a href="https://www.facebook.com/{{ site.fb_username }}/">
+            @{{ site.fb_username }} na Facebook-u
+          </a>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+  <div class="footer__row footer__row--wrapped">
+    {% for partner_group in site.data.partners %}
+    <section class="footer__tile">
+      <h2 class="footer__heading">{{ partner_group.name }}</h2>
+      <ul class="partner-list">
+        {% for partner_item in partner_group.items %}
+        <li class="partner-list__item">
+          <a class="partner-list__link" href="{{ partner_item.link }}">
+            <img
+              class="partner-list__logo"
+              alt="{{ partner_item.name }}"
+              src="{{ partner_item.image | prepend: site.baseurl }}"
+            >
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endfor %}
+  </div>
+  <div class="footer__credits">
+    <i class="material-icons">pets</i>
+    <p>
+      &copy; 2016
+      code by <a href="http://jakubroman.sk/">jro</a>
+      &amp;
+      design by <a href="https://www.facebook.com/ZuzanaChudaPhotography/">Zuzana Chudá</a>
+    </p>
+  </div>
+</footer>

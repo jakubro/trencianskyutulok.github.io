@@ -1,7 +1,7 @@
 @import "../_config";
 @import "../utils/utils";
 
-.partner-list {
+.bestof-list {
 
   @include layout-horizontal;
   @include layout-wrap;
@@ -25,8 +25,5 @@
 
   &__logo {
     @include block;
-
-    width: 69px;
-    height: 69px;
   }
 }

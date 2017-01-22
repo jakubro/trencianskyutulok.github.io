@@ -2,21 +2,37 @@
 layout: default
 ---
 
-<article class="article"
-         itemscope itemtype="http://schema.org/BlogPosting">
-  <header class="article__header">
-    <h1 itemprop="name headline">Psíkovia čakajúci na svoj nový domov</h1>
-  </header>
-  <div class="article__content"
-       itemprop="articleBody">
+NEKUPUJ, ADOPTUJ SI NÁS
+Z KARANTÉNNEJ STANICE TRENČÍN
 
-    Ak máte vo svojom domove kúsok prázdneho miesta, náš psík Vám ho zaplní láskou. Pre viac informácií, zavolajte
-    prosím vedúcej karanténnej stanice na telefónne číslo
-    <a href="tel:{{ site.phone | replace: '-', '' }}">{{ site.phone | replace: '-', '&nbsp;' }}</a>.
+<img src="{{ site.baseurl }}/images/site/index.png">
 
-    <iframe class="fb-page-gallery"
-            scrolling="no"
-            src="{{ site.fb_album_link }}"></iframe>
+<a href="ponuka/">Ponuka psíkov</a>
 
-  </div>
-</article>
+Vitajte na webovej stránke Občianskeho združenia Trenčiansky ÚTULOK,
+ktoré sa stará o psíkov v Karanténnej stanici Trenčín
+(v blízkej dobe aj o psíkov v Trenčianskom ÚTULKU).
+
+Najnovšie a najaktuálnejšie informácie o útulku, fungovaní, psíkoch aj
+novinkách nájdete na našej facebookovej stránke.
+
+<h2>Ako sa k nám dostanete?</h2>
+
+<div id="map" style="height: 400px; width: 100%"></div>
+<script>
+  function initMap() {
+    var uluru = {lat: 48.884797, lng: 18.0041647};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 14,
+      center: uluru,
+      scrollwheel: false
+    });
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+    });
+  }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?callback=initMap&language=sk&region=SK&key=AIzaSyD7hsnTxxljAwwlxZHmO9AVkku9fTftHFc">
+</script>

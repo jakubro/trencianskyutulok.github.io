@@ -1,59 +1,84 @@
 @import "config";
-@import "base/_flex";
 
-// Default scheme
-
-body {
-  @include fullbleed;
-
+.color {
+  /*
+  Default color scheme.
+   */
   color: $yellow;
   background: $dark-gray;
 
-  font-family: $base-font-family;
-  font-size: $base-font-size;
-  line-height: $base-line-height;
-}
-
-a {
-  color: $yellow;
-  text-decoration: none;
-
-  &:active,
-  &:focus,
-  &:hover {
-    color: $white;
-    text-decoration: underline;
-  }
-}
-
-.color-inverted {
-  color: $dark-gray;
-  background: $light-gray;
-
   a {
-    color: $blue;
+    color: $yellow;
+    text-decoration: none;
 
     &:active,
     &:focus,
     &:hover {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+
+  /*
+  Inverted color scheme.
+   */
+  &--inverted {
+    color: $dark-gray;
+    background: $light-gray;
+
+    a {
       color: $blue;
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: $blue;
+      }
     }
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $heading-font-family;
-  font-weight: 600;
-  line-height: $heading-line-height;
-}
+.theme {
 
-@for $i from 1 to 6 {
-  h#{$i} {
-    font-size: heading-font-size($i);
+  /*
+  Typography
+   */
+
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $heading-font-family;
+    font-weight: 600;
+  }
+
+  h1 {
+    font-size: 1.221em;
+  }
+
+  h2 {
+    font-size: 1.2025em;
+  }
+
+  h3 {
+    font-size: 1.184em;
+  }
+
+  h4 {
+    font-size: 1.1655em;
+  }
+
+  h5 {
+    font-size: 1.147em;
+  }
+
+  h6 {
+    font-size: 1.1285em;
   }
 }
