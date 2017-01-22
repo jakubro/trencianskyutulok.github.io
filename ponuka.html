@@ -7,13 +7,18 @@ excerpt: >
   Ak máte vo svojom domove kúsok prázdneho miesta, náš psík Vám ho zaplní láskou.
 ---
 
-Popis psíkov sa Vám zobrazí, ak si kliknete na fotku konkrétneho psíka.
-Ďalšie informácie Vám ochotne poskytne vedúca na telefónnom čísle
-<a href="tel:{{ site.phone | replace: '-', '' }}">{{ site.phone | replace: '-', '&nbsp;' }}</a>.
+<p>
+  Popis psíkov sa Vám zobrazí, ak si kliknete na fotku konkrétneho psíka.
+  Ďalšie informácie Vám ochotne poskytne vedúca na telefónnom čísle
+  <a href="tel:{{ site.phone | replace: '-', '' }}">
+    {{ site.phone | replace: '-', '&nbsp;' }}</a>.
+</p>
 
-Psíkov momentálne nie je možné venčiť.
-Po prestavbe na útulok môžete prísť psíkov vyvenčiť.
-Veľmi sa už na to tešia.
+<p>
+  Psíkov momentálne nie je možné venčiť.
+  Po prestavbe na útulok môžete prísť psíkov vyvenčiť.
+  Veľmi sa už na to tešia.
+</p>
 
 <ul class="bestof-list">
   {% for item in site.data.stastlivec %}
@@ -31,4 +36,4 @@ Veľmi sa už na to tešia.
 
 <iframe class="fb-page-gallery"
         scrolling="no"
-        src="{{ site.facebook_album_link }}"></iframe>
+        src="{{ site.fb_album_link }}"></iframe>

@@ -1,0 +1,29 @@
+@import "../_config";
+@import "../utils/utils";
+
+.bestof-list {
+
+  @include layout-horizontal;
+  @include layout-wrap;
+
+  @media (max-width: $large-screen) {
+    @include layout-center-justified;
+  }
+
+  @media (min-width: $large-screen) {
+    @include layout-start-justified;
+  }
+
+  &__item {
+    @include layout-inline;
+
+    padding: 1px;
+  }
+
+  &__link {
+  }
+
+  &__logo {
+    @include block;
+  }
+}
