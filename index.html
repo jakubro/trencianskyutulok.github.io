@@ -21,14 +21,14 @@ novinkách nájdete na našej facebookovej stránke.
 <div id="map" style="height: 400px; width: 100%"></div>
 <script>
   function initMap() {
-    var uluru = {lat: 48.884797, lng: 18.0041647};
+    var latlng = {lat: 48.884804, lng: 18.006348};
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 14,
-      center: uluru,
+      zoom: 16,
+      center: latlng,
       scrollwheel: false
     });
     var marker = new google.maps.Marker({
-      position: uluru,
+      position: latlng,
       map: map
     });
   }
