@@ -6,7 +6,7 @@ description: >
   Postupne sa z Karanténnej stanice Trenčín stáva útulok pre psíkov v Trenčíne.
 
 url: https://jakubro.github.io
-baseurl: "trencianskyutulok.github.io"
+baseurl: "/trencianskyutulok.github.io"
 
 google_analytics: UA-78893572-1
 fb_album_link: https://embedsocial.com/facebook_album/pro/391cc6bc1c01f1a6b732c89d6cd5d8af80257c5f
