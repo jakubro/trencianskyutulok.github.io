@@ -1,5 +1,7 @@
+---
+---
 requirejs.config({
-  baseUrl: '/',
+  baseUrl: '{{ site.baseurl }}',
   paths: {
     jquery: '../bower_components/jquery/dist/jquery.min',
     iframeSizer: '../bower_components/iframe-resizer/js/iframeResizer.min'
